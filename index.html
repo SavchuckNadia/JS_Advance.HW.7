@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="block1"   class="block">
+        <p>Please sign up</p>
+        <div class="container">
+            <form name="f1" class="form">
+                <div class="input-block"> 
+                    <div class="form-group">
+                        <input type="text" name="firstName" placeholder="First name" id="firstName" class="form-control" >
+                        <label for="firstName" class="form-label">First name</label>
+                    </div>
+                    <img class="img1 check correct0 " src="./images/check.svg" alt="">
+                    <img class="img1 close error0 " src="./images/close.svg" alt="">
+                </div>
+                <div class="input-block">
+                    <div class="form-group">
+                        <input type="text" name="lastName" placeholder="Last name" id="lastName" class="form-control" >
+                        <label for="lastName" class="form-label">Last name</label>
+                    </div>
+                    <img class="img1 check correct1" src="./images/check.svg" alt="">
+                    <img class="img1 close error1" src="./images/close.svg" alt="">
+                </div>
+                <div class="input-block">
+                    <div class="form-group">
+                        <input type="text" name="email" placeholder="Email address" id="email" class="form-control" >
+                        <label for="email" class="form-label">Email address</label>
+                    </div>
+                    <img class="img1 check correct2" src="./images/check.svg" alt="">
+                    <img class="img1 close error2 " src="./images/close.svg" alt="">
+                    <div class="error email">
+                        <p>This email already exist</p>
+                    </div>
+                </div>
+                <div class="input-block">
+                    <div class="form-group">
+                        <input type="password" name="password" placeholder="Password" id="password" class="form-control" >
+                        <label for="password" class="form-label">Password</label>
+                    </div>
+                    <img class="img1 check correct3" src="./images/check.svg" alt="">
+                    <img class="img1 close  error3" src="./images/close.svg" alt="">
+                </div>
+                <input name="tb" class="button" type="submit" value="Sign Up">
+            </form>
+            <p class="link-signIn sign">Sign in now</p>
+        </div>
+    </div>
+    <div  id="block2" class="block">
+        <p>Please sign in</p>
+        <div class="container" >
+            <form name="f2">
+                <div class="input-block">
+                    <div class="form-group">
+                        <input type="text" name="email" placeholder="Email address" id="email" class="form-control"  required>
+                        <label for="email" class="form-label">Email address</label>
+                    </div>
+                    <img class="img1 check correct0" src="./images/check.svg" alt="">
+                    <img class="img1 close error0 " src="./images/close.svg" alt="">
+                </div>
+                <div class="input-block">
+                    <div class="form-group">
+                        <input type="password" name="password" placeholder="Password" id="password" class="form-control"  required>
+                        <label for="password" class="form-label">Password</label>
+                    </div>
+                    <img class="img1 check correct1" src="./images/check.svg" alt="">
+                    <img class="img1 close  error1" src="./images/close.svg" alt="">
+                </div>
+                <div class=" errorSignIn">
+                    <p>Incorrect email or password</p>
+                </div>
+                <div class=" errorEmpty">
+                    <p>localstorage is empty</p>
+                </div>
+                <input name="tb" class="button btnSignIn" type="submit" value="Sign In">
+            </form>
+            <p class="link-signUp sign">Sign up now</p>
+        </div>
+    </div>
+    <div id="profile">
+        <div class="block-user">
+            <div class="photo">
+                <img src="./images/avatar (1).svg" alt="">
+            </div>
+            <p id="first-last_name"></p>
+            <p id="user-email"></p>
+            <p id="direction">Designer & Web Developing</p>
+            <div class="line"></div>
+            <input name="tb" class="button btnSignIn" id="btnProfile" type="button" value="Sign Up">
+        </div>
+    </div>
+
+
+    <script src="./main.js"></script>
+</body>
+</html>
