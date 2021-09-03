@@ -229,6 +229,15 @@ FORM2.addEventListener('submit', function (event) {
         return check;
     }
 
+    function getName() {
+
+        if (localStorage.length > 0 && localStorage.getItem('users')) {
+            let userN = JSON.parse(localStorage.getItem('users'));
+            let firstName = userN[userIndex].firstName;
+            let lastName = userN[userIndex].lastName;
+            return `${firstName} ${lastName}`
+        }
+    }
     let result = userArr.some(user => deepEqual(user, uSignIn) == true);
     if (check == true) {
         document.querySelector('#block2').style.display = 'none';
@@ -247,15 +256,6 @@ FORM2.addEventListener('submit', function (event) {
         document.querySelector('.email').style.display = 'none';
     }
 
-    function getName() {
-
-        if (localStorage.length > 0 && localStorage.getItem('users')) {
-            let userN = JSON.parse(localStorage.getItem('users'));
-            let firstName = userN[userIndex].firstName;
-            let lastName = userN[userIndex].lastName;
-            return `${firstName} ${lastName}`
-        }
-    }
 })
 document.querySelector('#btnProfile').addEventListener('click', function () {
     displayBlock('#block2', '#profile');
